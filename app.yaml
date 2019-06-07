@@ -1,0 +1,12 @@
+runtime: nodejs10
+env: standard
+instance_class: F1
+service: default
+handlers:
+  - url: '.*'
+    script: auto
+inbound_services:
+  - warmup
+automatic_scaling:
+  target_cpu_utilization: 0.6
+  min_instances: 1
