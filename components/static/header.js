@@ -18,8 +18,12 @@ const Header = ({ items, runFilter }) => (
 );
 
 Header.propTypes = {
-  items: PropTypes.node.isRequired,
+  items: PropTypes.node,
   runFilter: PropTypes.func.isRequired,
+};
+
+Header.defaultProps = {
+  items: {},
 };
 
 export default Header;
