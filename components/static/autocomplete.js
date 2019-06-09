@@ -64,10 +64,12 @@ export default class AutoCompleteText extends Component {
   }
 
   suggestionSelected(value) {
+    const { runFilter } = this.props;
     this.setState(() => ({
       text: value,
       suggestions: [],
     }));
+    runFilter(value);
   }
 
   renderSuggestions() {
@@ -103,6 +105,10 @@ export default class AutoCompleteText extends Component {
 }
 
 AutoCompleteText.propTypes = {
-  items: PropTypes.node.isRequired,
+  items: PropTypes.node,
   runFilter: PropTypes.func.isRequired,
+};
+
+AutoCompleteText.defaultProps = {
+  items: {},
 };
