@@ -11,8 +11,7 @@
 - **Development**
   - **Frontend**
     - Run `npm run dev`
-  - **Storybook**
-    - Run `npm run storybook`
+    - Url: `http://localhost:3000`
 - **Production (simulated)**
   - **Frontend**
     - Run `npm run build`
@@ -22,4 +21,5 @@
     - Run `npm run test`
 
 ## Misc
+- Tested on node version `10.15.3`
 - The ESLINT config is enforced as a pre-commit hook
